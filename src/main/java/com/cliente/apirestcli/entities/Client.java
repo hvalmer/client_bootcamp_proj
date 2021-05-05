@@ -10,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_cliente")
-public class Cliente implements Serializable {
+@Table(name="tb_client")
+public class Client implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -24,10 +24,10 @@ public class Cliente implements Serializable {
 	private Instant birthDate;
 	private Integer children;
 	
-	public Cliente() {
+	public Client() {
 	}
 	
-	public Cliente(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
+	public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -101,7 +101,7 @@ public class Cliente implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Cliente other = (Cliente) obj;
+		Client other = (Client) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
